@@ -9,7 +9,7 @@ with project:
     data = Smiles2Conformers(smiles="CCCO", num_confs=10)
     geom_opt = StructureOptimization(data=data.frames, model=model)
     md = MolecularDynamics(
-        data=geom_opt.frames, model=model, thermo_interval=10, always_changed=True
+        data=geom_opt.frames, model=model, thermo_interval=10
     )
 
 project.repro()
